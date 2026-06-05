@@ -35,9 +35,11 @@ mongoose.connect("mongodb://127.0.0.1:27017/fullstackdb")
 .catch(err => console.log(err));
 
 const userRoutes = require("./routes/userRoutes");
+const taskRoutes = require("./routes/taskRoutes");
 
 app.use("/api", userRoutes);
+app.use("/api", taskRoutes);
 
-app.listen(3000, () => {
-  console.log("Server running on port 3000");
+app.listen(4000, () => {
+  console.log("Server running on port 4000");
 });
